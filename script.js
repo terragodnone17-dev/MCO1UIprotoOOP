@@ -120,7 +120,7 @@ class forvalidation {
 
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements - Form
-    // const vatForm = document.getElementById('vatForm');
+    const vatForm = document.getElementById('vatForm');
     const employeeNameInput = document.getElementById('employeeName');
     const salaryAmountInput = document.getElementById('salaryAmount');
     const btnClear = document.getElementById('btnClear');
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resTotalDeductions = document.getElementById('resTotalDeductions');
     const resAvailableBalance = document.getElementById('resAvailableBalance');
 
-    // DOM Elements - Breakdown Table
+    // DOM Elements - Breakdown Table an sa tight side table
     const tblSSS = document.getElementById('tblSSS');
     const tblBIR = document.getElementById('tblBIR');
     const tblTotalDeduc = document.getElementById('tblTotalDeduc');
