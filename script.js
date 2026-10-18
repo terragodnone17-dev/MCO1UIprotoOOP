@@ -12,10 +12,10 @@ class forvalidation {
         this.remainingbal = undefined;
     }
 
-    /**
-     * Converts salary input to float.
-     * Handles string clean-up (removing commas) so standard formatted numbers parse accurately.
-     */
+    
+    //   Converts salary input to float.
+    //   Handles string clean-up (removing commas) so standard formatted numbers parse accurately.
+     
     displayOrigSalary() {
         if (typeof this.validSalary2 === 'number') {
             this.converted2 = this.validSalary2;
@@ -26,57 +26,74 @@ class forvalidation {
         return this.converted2;
     }
 
-    /**
-     * Validates name using the original regex: /^[a-zA-Z .,]+$/
-     */
+    
+     // Validates name using the original regex: /^[a-zA-Z .,]+$/
+     
     Validanngaran() {
-        if (!this.validName1 || typeof this.validName1 !== 'string') return false;
+        if (!this.validName1 || typeof this.validName1 !== 'string') {
+            return false;
+        }
+
         const trimmed = this.validName1.trim();
-        if (trimmed.length === 0) return false;
-        const insideValidanngaran = /^[a-zA-Z .,]+$/.test(trimmed);
+
+        if (trimmed.length === 0) {
+            return false;
+        }
+
+        const insideValidanngaran =
+            /^[a-zA-Z .,]+$/.test(trimmed);
+
         return insideValidanngaran;
     }
 
-    /**
-     * Validates salary using the original regex: /^[0-9 .,]+$/
-     */
+
+     // Validates salary using the original regex: /^[0-9 .,]+$/
+     
     ValidanSalary() {
-        if (this.validSalary2 === undefined || this.validSalary2 === null) return false;
+        if (this.validSalary2 === undefined || this.validSalary2 === null) {
+            return false;
+        }
+
         const strVal = String(this.validSalary2).trim();
-        if (strVal.length === 0) return false;
+
+        if (strVal.length === 0) {
+            return false;
+        }
         
         const insideValidanSalary = /^[0-9 .,]+$/.test(strVal);
+
         const parsed = parseFloat(strVal.replace(/,/g, ''));
+        
         return insideValidanSalary && !isNaN(parsed) && parsed > 0;
     }
 
-    /**
-     * SSS 3% Reduction
-     */
+   
+    // SSS 3% Reduction
+    
     SSS() {
         const valuetobeprintedsss = this.displayOrigSalary() * (this.SSSpercent / 100);
         return valuetobeprintedsss;
     }
 
-    /**
-     * BIR 4% VAT Reduction
-     */
+   
+    // BIR 4% VAT Reduction
+     
     Vat() {
         const VatDeduction = this.displayOrigSalary() * (this.VatDeduction1 / 100);
         return VatDeduction;
     }
 
-    /**
-     * Total Reduction = Vat() + SSS()
-     */
+    
+     // Total Reduction = Vat() + SSS()
+     
     TotalDeduc() {
         const Total = this.Vat() + this.SSS();
         return Total;
     }
 
-    /**
-     * Available Balance = displayOrigSalary() - TotalDeduc()
-     */
+   
+     // Available Balance = displayOrigSalary() - TotalDeduc()
+     
     remaining() {
         this.remainingbal = this.displayOrigSalary() - this.TotalDeduc();
         return this.remainingbal;
@@ -95,15 +112,15 @@ class forvalidation {
 
 
 
-/**
- * ============================================================================
- * UI CONTROLLER & EVENT LISTENERS 
- * Connects the web interface to the forvalidation OOP class.
- * ============================================================================
- */
+
+ // ============================================================================
+ // UI CONTROLLER & EVENT LISTENERS 
+ // Connects the web interface to the forvalidation OOP class.
+ // ============================================================================
+
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements - Form
-    const vatForm = document.getElementById('vatForm');
+    // const vatForm = document.getElementById('vatForm');
     const employeeNameInput = document.getElementById('employeeName');
     const salaryAmountInput = document.getElementById('salaryAmount');
     const btnClear = document.getElementById('btnClear');
@@ -140,9 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-     * Real-time Validation Helper
-     */
+   
+     // Real-time Validation Helper
+  
     function validateInputs(nameVal, salaryVal) {
         const validator = new forvalidation(nameVal, salaryVal);
         const isNameValid = validator.Validanngaran();
@@ -195,9 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return { validator, isNameValid, isSalaryValid };
     }
 
-    /**
-     * Compute and render results
-     */
+   
+    //   Compute and render results
+ 
     function executeCalculation(nameperson, Salary) {
         const { validator, isNameValid, isSalaryValid } = validateInputs(nameperson, Salary);
 
