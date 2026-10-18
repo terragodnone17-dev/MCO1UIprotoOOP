@@ -77,6 +77,7 @@ body{
     margin-bottom:20px;
     border-bottom:1px solid #ddd;
     padding-bottom:10px;
+
 }
 
 /* Form */
@@ -161,6 +162,7 @@ input{
 .empty-state{
     text-align:center;
     padding:50px 20px;
+    border-radius: 20px;
 }
 
 .empty-state h3{
@@ -234,12 +236,14 @@ input{
 .breakdown-table{
     width:100%;
     border-collapse:collapse;
+    border-radius: 20px;
 }
 
 .breakdown-table th,
 .breakdown-table td{
     border:1px solid #ddd;
     padding:10px;
+
 }
 
 .breakdown-table th{
