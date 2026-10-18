@@ -46,8 +46,6 @@ The UI directly implements and instantiates the `forvalidation` class:
    - Visual feedback indicators (green checkmarks or red warnings) based on the exact regex validation rules.
 5. **Quick Preset Picks**:
    - 1-click test buttons with realistic sample salaries (₱18k, ₱25k, ₱45k, ₱80k).
-6. **Print / Export Ready**:
-   - Built-in print styling (`window.print()`) that formats clean payslip summaries for physical submission or PDF saving.
 
 ---
 

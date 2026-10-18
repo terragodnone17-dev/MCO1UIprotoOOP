@@ -129,17 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tblTotalDeduc = document.getElementById('tblTotalDeduc');
     const tblNetPay = document.getElementById('tblNetPay');
 
-    // DOM Elements - CLI Terminal
-    const terminalOutput = document.getElementById('terminalOutput');
-    const btnViewDashboard = document.getElementById('btnViewDashboard');
-    const btnViewTerminal = document.getElementById('btnViewTerminal');
-    const viewDashboardContent = document.getElementById('viewDashboardContent');
-    const viewTerminalContent = document.getElementById('viewTerminalContent');
-    const btnPrintReceipt = document.getElementById('btnPrintReceipt');
 
-
-    // Session State 
-    let latestCLIOutput = '';
 
     /**
      * Helper: Format number to Philippine Peso currency string
@@ -207,39 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Generate identical CLI output matching JSMCO1OOPCabili.js console.log()
-     */
-    function generateCLIOutput(nameperson, validator) {
-        const sss = validator.SSS().toFixed(2);
-        const vat = validator.Vat().toFixed(2);
-        const total = validator.TotalDeduc().toFixed(2);
-        const remaining = validator.remaining().toFixed(2);
-
-        return [
-            '============================================',
-            '                  VatAnalyzer',
-            '--------------------------------------------',
-            `Enter Name: ${nameperson}`,
-            `Enter Salary: ${validator.displayOrigSalary()}`,
-            '============================================',
-            `Welcome  ${nameperson}`,
-            '============================================\n',
-            'DEDUCTION\n',
-            `Calculating SSS 3% Reduction:  ${sss}`,
-            `Calculating BIR 4% REDUCTION:  ${vat}`,
-            '--------------------------------------------',
-            `Total Reduction:  ${total}`,
-            '--------------------------------------------',
-            '============================================\n',
-            `Available balance:  ${remaining}`,
-            '============================================\n'
-        ].join('\n');
-    }
-
-
-
-
-    /**
      * Compute and render results
      */
     function executeCalculation(nameperson, Salary) {
@@ -268,24 +225,12 @@ document.addEventListener('DOMContentLoaded', () => {
         tblTotalDeduc.textContent = formatCurrency(totalDeductions);
         tblNetPay.textContent = formatCurrency(netSalary);
 
-        // 3. Generate CLI simulation text
-        latestCLIOutput = generateCLIOutput(nameperson.trim(), validator);
-        terminalOutput.textContent = latestCLIOutput;
 
-        // 4. Reveal Results section
+        // 4. Reveal Results section if kun gin gin click an calculate add and remove
         emptyState.classList.add('hidden');
         resultsContainer.classList.remove('hidden');
 
-        // 5. Append to History
-        addToHistory({
-            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
-            name: nameperson.trim(),
-            gross: gross,
-            sss: sssAmount,
-            bir: vatAmount,
-            totalDeduc: totalDeductions,
-            net: netSalary
-        });
+
     }
 
  
@@ -311,16 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
         validateInputs(employeeNameInput.value, salaryAmountInput.value);
     });
 
-    // Preset Buttons
-    // document.querySelectorAll('.btn-preset').forEach(btn => {
-    //     btn.addEventListener('click', () => {
-    //         const presetName = btn.getAttribute('data-name');
-    //         const presetSalary = btn.getAttribute('data-salary');
-    //         employeeNameInput.value = presetName;
-    //         salaryAmountInput.value = Number(presetSalary).toLocaleString('en-US', { minimumFractionDigits: 2 });
-    //         executeCalculation(presetName, presetSalary);
-    //     });
-    // });
 
     // Clear Form
     btnClear.addEventListener('click', () => {
@@ -334,27 +269,18 @@ document.addEventListener('DOMContentLoaded', () => {
         nameStatus.innerHTML = '';
         salaryStatus.innerHTML = '';
         employeeNameInput.focus();
+        
+
+
+
+
+        // clear button para ma clear kun gin press an clear button sa left side form gamit an add and remove 
+
+        // gin show niya an resultsContainer
+        resultsContainer.classList.add('hidden');
+        // gin hide niya an empty state
+        emptyState.classList.remove('hidden');
     });
 
 
-    // Toggle Dashboard vs Terminal View
-    btnViewDashboard.addEventListener('click', () => {
-        btnViewDashboard.classList.add('active');
-        btnViewTerminal.classList.remove('active');
-        viewDashboardContent.classList.remove('hidden');
-        viewTerminalContent.classList.add('hidden');
-    });
-
-    btnViewTerminal.addEventListener('click', () => {
-        btnViewTerminal.classList.add('active');
-        btnViewDashboard.classList.remove('active');
-        viewTerminalContent.classList.remove('hidden');
-        viewDashboardContent.classList.add('hidden');
-    });
-
- 
-    // Print Receipt / Summary
-    btnPrintReceipt.addEventListener('click', () => {
-        window.print();
-    });
 });

@@ -9,11 +9,11 @@
 
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
-        <!-- Header -->
+<!-- Header -->
         <header class="app-header">
             <div class="header-container">
                 <div class="brand">
-                    <div class="brand-nwssu">
+                    <div >
                          <img  src = "C:\xampp\ALL PROGRAMM ACT OR MCO\3rd_year_programm\Sir_Ventures\MCO1\WithUIJSversion\nwssu_logo.png" alt="logo san nwssu" width="90" height="90">
                     </div>
                     <div>
@@ -21,9 +21,9 @@
                         <p class="brand-subtitle">Salary & Deduction Analysis System &bull; OOP JavaScript</p>
                     </div>
                 </div>
-                <div class="header-badge">
+                <div >
                     <span class="badge-pill">MCO1 OOP</span>
-                    <span class="badge-sub">Sir Ventures</span>
+                    <span >Sir Ventures</span>
                 </div>
             </div>
         </header>
@@ -32,22 +32,28 @@
 
 
 
-        <!--Asya an Main Content -->
+<!--Asya an Main Content -->
         <main class="main-content">
             <div class="layout-grid">
-                <!-- Left Column: Input Form -->
-                <section class="card input-card">
+
+                <!-- Ans sa Left Column: Input Form -->
+                <section class="policy-card">
+
                     <div class="card-header">
-                        <div class="header-icon input-icon">
+
+                        <div >
+                            
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <!-- An sa human logo circle -->
                                 <circle cx="12" cy="7" r="4" ></circle>
+                                <!-- an sa body san human logo  -->
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" ></path>
                                 
                             </svg>
                         </div>
                         <div>
                             <h2>Employee Information</h2>
-                            <p class="section-desc">Enter the employee's details to analyze deductions</p>
+                            <p >Enter the employee's details to analyze deductions</p>
                         </div>
                     </div>
 
@@ -57,8 +63,8 @@
                             <label for="employeeName">
                                 Full Name <span class="required">*</span>
                             </label>
-                            <div class="input-wrapper">
-                                <svg class="field-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <div >
+                                <svg  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                 <input 
                                     type="text" 
                                     id="employeeName" 
@@ -67,19 +73,18 @@
                                     autocomplete="off"
                                     required
                                 >
-                                <span class="validation-status" id="nameStatus"></span>
+                                <span  id="nameStatus"></span>
                             </div>
                             <small class="feedback" id="nameFeedback">Letters, spaces, periods, and commas only</small>
                         </div>
-<!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
-                        <!-- Salary Field -->
+<!-- Salary Field -->
                         <div class="form-group" id="group-salary">
                             <label for="salaryAmount">
                                 Monthly Salary (PHP) <span class="required">*</span>
                             </label>
-                            <div class="input-wrapper">
-                                <span class="currency-symbol">₱</span>
+                            <div >
+                                <span >₱</span>
                                 <input 
                                     type="text" 
                                     id="salaryAmount" 
@@ -88,7 +93,7 @@
                                     autocomplete="off"
                                     required
                                 >
-                                <span class="validation-status" id="salaryStatus"></span>
+                                <span  id="salaryStatus"></span>
                             </div>
                             <small class="feedback" id="salaryFeedback">Numbers, spaces, periods, and commas only</small>
                         </div>
@@ -98,10 +103,15 @@
 
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
-                        <!-- An para sa Deduction Policy  -->
+<!-- An para sa Deduction Policy  -->
                         <div class="policy-card">
                             <div class="policy-header">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" fill="green">
+                                    <circle cx="12" cy="12" r="10" color = "green"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="18" color = "red"></line>
+                                    <line x1="12" y1="15" x2="12.01" y2="8"></line>
+                                </svg>
+
                                 <span>Computation Rates:</span>
                             </div>
                             <div class="policy-rates">
@@ -119,34 +129,47 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+              
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
-                        <!-- An Para sa Buttons -->
+<!-- An Para sa Buttons -->
                         <div class="button-group">
                             <button type="submit" class="btn btn-primary" id="btnCalculate">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                                    <line x1="8" y1="6" x2="16" y2="6"></line>
-                                    <line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path>
-                                    <path d="M12 10h.01"></path><path d="M8 10h.01"></path>
-                                    <path d="M12 14h.01"></path><path d="M8 14h.01"></path>
-                                    <path d="M12 18h.01"></path><path d="M8 18h.01"></path>
-                                </svg>
-                                
                                 Calculate Deductions
                             </button>
                             <button type="button" class="btn btn-secondary" id="btnClear">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 6h18"></path>
-                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                </svg>
-
                                 Clear
                             </button>
                         </div>
                     </form>
                 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,14 +199,18 @@
 
 
                 <!-- Right Column: Results Section -->
-                <section class="card results-card" id="resultsSection">
+                <section class="policy-card" id="resultsSection">
                     <!-- Placeholder State -->
                     <div class="empty-state" id="emptyState">
-                        <div class="empty-illustration">
+                        <div >
+                            <!-- an para sa bagan computer na logo -->
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <!-- an sa monitor -->
+                                <rect x="2" y="3" width="20" height="14" rx="6" ry="6"></rect>
+                                <!-- an para sa iya stand -->
                                 <line x1="8" y1="21" x2="16" y2="21"></line>
                                 <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <!-- an para sa circle or an sulod san  monitor -->
                                 <circle cx="8" cy="10" r="1"></circle>
                                 <line x1="12" y1="10" x2="17" y2="10"></line>
                                 <line x1="7" y1="13" x2="17" y2="13"></line>
@@ -198,17 +225,14 @@
 
 
                     <!-- Computed Results Container -->
-                    <div class="results-container hidden" id="resultsContainer">
+                    <div class="hidden" id="resultsContainer">
                         <!-- Welcome Banner -->
                         <div class="welcome-banner">
-                            <div class="welcome-text">
-                                <span class="welcome-greeting">Deduction Analysis for</span>
+                            <div >
+                                <span >Deduction Analysis for</span>
                                 <h2 class="welcome-name" id="resWelcomeName">Welcome, Employee</h2>
                             </div>
-                            <div class="view-toggle">
-                                <button type="button" class="toggle-btn active" id="btnViewDashboard">Dashboard</button>
-                                <button type="button" class="toggle-btn" id="btnViewTerminal">CLI Console</button>
-                            </div>
+
                         </div>
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
@@ -220,45 +244,45 @@
                             <!-- KPI Metrics Grid -->
                             <div class="kpi-grid">
                                 <div class="kpi-card gross-card">
-                                    <div class="kpi-label">Gross Salary</div>
+                                    <div >Gross Salary</div>
                                     <div class="kpi-value" id="resGrossSalary">₱0.00</div>
-                                    <div class="kpi-sub">Original Input</div>
+                                    <div >Original Input</div>
                                 </div>
                                 <div class="kpi-card deduction-card">
-                                    <div class="kpi-label">Total Reductions</div>
+                                    <div >Total Reductions</div>
                                     <div class="kpi-value" id="resTotalDeductions">₱0.00</div>
-                                    <div class="kpi-sub">SSS (3%) + BIR (4%)</div>
+                                    <div >SSS (3%) + BIR (4%)</div>
                                 </div>
                                 <div class="kpi-card net-card">
-                                    <div class="kpi-label">Available Balance</div>
+                                    <div >Available Balance</div>
                                     <div class="kpi-value" id="resAvailableBalance">₱0.00</div>
-                                    <div class="kpi-sub">Take-Home Pay (93%)</div>
+                                    <div >Take-Home Pay (93%)</div>
                                 </div>
                             </div>
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
                             <!-- Distribution Proportion Bar -->
-                            <div class="progress-container">
-                                <div class="progress-header">
+                            <div >
+                                <div >
                                     <span>Salary Allocation Breakdown</span>
-                                    <span class="progress-total">100%</span>
+                                    <span >100%</span>
                                 </div>
                                 <div class="multi-progress">
-                                    <div class="prog-segment prog-net" id="barNet" style="width: 93%;" title="Net Salary (93%)"></div>
-                                    <div class="prog-segment prog-sss" id="barSSS" style="width: 3%;" title="SSS (3%)"></div>
-                                    <div class="prog-segment prog-bir" id="barBIR" style="width: 4%;" title="BIR/VAT (4%)"></div>
+                                    <div class="prog-net" id="barNet" style="width: 93%;" title="Net Salary (93%)"></div>
+                                    <div class="prog-sss" id="barSSS" style="width: 3%;" title="SSS (3%)"></div>
+                                    <div class="prog-bir" id="barBIR" style="width: 4%;" title="BIR/VAT (4%)"></div>
                                 </div>
-                                <div class="progress-legend">
-                                    <div class="legend-item"><span class="legend-color prog-net"></span> Net Pay: <strong>93%</strong></div>
-                                    <div class="legend-item"><span class="legend-color prog-sss"></span> SSS: <strong>3%</strong></div>
-                                    <div class="legend-item"><span class="legend-color prog-bir"></span> BIR/VAT: <strong>4%</strong></div>
+                                <div >
+                                    <div ><span class="prog-net"></span> Net Pay: <strong>93%</strong></div>
+                                    <div ><span class="prog-sss"></span> SSS: <strong>3%</strong></div>
+                                    <div ><span class="prog-bir"></span> BIR/VAT: <strong>4%</strong></div>
                                 </div>
                             </div>
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
                             <!-- Detailed Deduction Table -->
-                            <div class="breakdown-table-wrapper">
-                                <h3 class="table-title">Deduction Details</h3>
+                            <div >
+                                <h3 >Deduction Details</h3>
                                 <table class="breakdown-table">
                                     <thead>
                                         <tr>
@@ -270,85 +294,115 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <div class="item-title">Social Security System (SSS)</div>
-                                                <div class="item-desc">Mandatory statutory employee contribution</div>
+                                                <div >Social Security System (SSS)</div>
+                                                <div >Mandatory statutory employee contribution</div>
                                             </td>
-                                            <td><span class="badge-rate">3.0%</span></td>
-                                            <td class="text-right font-medium text-danger" id="tblSSS">₱0.00</td>
+                                            <td><span >3.0%</span></td>
+                                            <td class="text-right text-danger" id="tblSSS">₱0.00</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="item-title">Bureau of Internal Revenue (BIR / VAT)</div>
-                                                <div class="item-desc">Withholding value added / statutory tax deduction</div>
+                                                <div >Bureau of Internal Revenue (BIR / VAT)</div>
+                                                <div >Withholding value added / statutory tax deduction</div>
                                             </td>
-                                            <td><span class="badge-rate">4.0%</span></td>
-                                            <td class="text-right font-medium text-danger" id="tblBIR">₱0.00</td>
+                                            <td><span >4.0%</span></td>
+                                            <td class="text-right text-danger" id="tblBIR">₱0.00</td>
                                         </tr>
-                                        <tr class="table-divider-row">
+                                        <tr >
                                             <td colspan="3"></td>
                                         </tr>
-                                        <tr class="row-highlight">
+                                        <tr >
                                             <td><strong>Total Reductions</strong></td>
-                                            <td><span class="badge-rate badge-danger">7.0%</span></td>
-                                            <td class="text-right font-bold text-danger" id="tblTotalDeduc">₱0.00</td>
+                                            <td><span >7.0%</span></td>
+                                            <td class="text-right text-danger" id="tblTotalDeduc">₱0.00</td>
                                         </tr>
-                                        <tr class="row-success">
+                                        <tr >
                                             <td><strong>Net Available Balance</strong></td>
-                                            <td><span class="badge-rate badge-success">93.0%</span></td>
-                                            <td class="text-right font-bold text-success" id="tblNetPay">₱0.00</td>
+                                            <td><span >93.0%</span></td>
+                                            <td class="text-right text-success" id="tblNetPay">₱0.00</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-<!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
-
-                            <!-- Action Bar -->
-                            <div class="action-bar">
-                                <button type="button" class="btn btn-outline" id="btnPrintReceipt">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-                                    Print / Save Summary
-                                </button>
-                                <button type="button" class="btn btn-outline" id="btnCopyCLI">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    Copy CLI Output
-                                </button>
-                            </div>
                         </div>
-<!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
-
-                        <!-- Terminal Simulation View -->
-                        <div id="viewTerminalContent" class="hidden">
-                            <div class="terminal-window">
-                                <div class="terminal-bar">
-                                    <div class="terminal-dots">
-                                        <span class="dot red"></span>
-                                        <span class="dot yellow"></span>
-                                        <span class="dot green"></span>
-                                    </div>
-                                    <div class="terminal-title">node JSMCO1OOPCabili.js (Live Emulation)</div>
-                                </div>
-                                <pre class="terminal-body" id="terminalOutput"></pre>
-                            </div>
-                        </div>
-                    </div>
                 </section>
             </div>
         </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
         <!-- Footer -->
         <footer class="app-footer">
-            <div class="footer-container">
+            <div >
                 <p>
-                    <strong>VatAnalyzer UI</strong> &bull; Based on <code>JSMCO1OOPCabili.js</code> &bull; Major Course Output 1 (OOP)
+                    <strong>VatAnalyzer UI</strong> Based on Major Course Output 1 (OOP)
                 </p>
-                <p class="footer-sub">Instructor: <em>Sir Ventures</em> &bull; Student: <em>Cabili</em></p>
+                <p>Instructor: <em>Sir Ventures</em> -- Student: <em>Cabili</em></p>
             </div>
         </footer>
     </div>
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Script importing the OOP Class & UI logic -->
     <script src="script.js"></script>
 </body>
 </html>
+
