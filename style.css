@@ -178,7 +178,7 @@ input{
     color:#003366;
 }
 
-/* KPI Cards */
+/* KPI Cards an sa ubos san welcome right side*/
 .kpi-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
