@@ -95,10 +95,9 @@ class forvalidation {
 
 
 
-
 /**
  * ============================================================================
- * UI CONTROLLER & EVENT LISTENERS
+ * UI CONTROLLER & EVENT LISTENERS 
  * Connects the web interface to the forvalidation OOP class.
  * ============================================================================
  */
@@ -131,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /**
-     * Helper: Format number to Philippine Peso currency string
-     */
+
+    //  gin Format number to Peso currency string
+
     function formatCurrency(amount) {
         return '₱' + Number(amount).toLocaleString('en-PH', {
             minimumFractionDigits: 2,
@@ -235,6 +234,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     // =========================================================================
     // EVENT LISTENERS
     // =========================================================================
@@ -281,6 +298,5 @@ document.addEventListener('DOMContentLoaded', () => {
         // gin hide niya an empty state
         emptyState.classList.remove('hidden');
     });
-
 
 });
