@@ -57,6 +57,12 @@
                         </div>
                     </div>
 
+
+
+
+
+
+<!-- an sa form  -->
                     <form id="vatForm" novalidate>
                         <!-- Name Field -->
                         <div class="form-group" id="group-name">
@@ -78,7 +84,7 @@
                             <small class="feedback" id="nameFeedback">Letters, spaces, periods, and commas only</small>
                         </div>
 
-<!-- Salary Field -->
+<!-- Salary na part Form -->
                         <div class="form-group" id="group-salary">
                             <label for="salaryAmount">
                                 Monthly Salary (PHP) <span class="required">*</span>
@@ -281,9 +287,14 @@
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
                             <!-- Detailed Deduction Table -->
-                            <div >
+                             <br></br>
+                            <div class ="empty-state">
+                                
+                             
                                 <h3 >Deduction Details</h3>
+                                
                                 <table class="breakdown-table">
+                                
                                     <thead>
                                         <tr>
                                             <th>Description</th>
@@ -297,7 +308,9 @@
                                                 <div >Social Security System (SSS)</div>
                                                 <div >Mandatory statutory employee contribution</div>
                                             </td>
-                                            <td><span >3.0%</span></td>
+                                            <td>
+                                                <span >3.0%</span>
+                                            </td>
                                             <td class="text-right text-danger" id="tblSSS">₱0.00</td>
                                         </tr>
                                         <tr>
