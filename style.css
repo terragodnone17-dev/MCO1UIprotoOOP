@@ -13,13 +13,14 @@ body{
 
 .app-wrapper{
     width:100%;
+
 }
 
 /* Header */
 .app-header{
     background:#003366;
     color:white;
-    padding:20px;
+    padding:10px;
 }
 
 .header-container{
@@ -287,7 +288,7 @@ input{
     margin-top:20px;
 }
 
-/* Utility */
+/* an para sa pag display san mga boxes */
 .hidden{
     display:none;
 }
@@ -332,4 +333,4 @@ input{
     display: flex;
     align-items: center;
     gap: 0.35rem;
-                     }
+}
