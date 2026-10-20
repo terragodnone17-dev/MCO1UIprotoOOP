@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-wrapper">
+    
 
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
-
+    <div  class="app-wrapper">
 <!-- Header -->
         <header class="app-header">
             <div class="header-container">
@@ -148,7 +148,7 @@
 
 <!-- An Para sa Buttons unos san Policy -->
                         <div class="button-group">
-                            <button type="submit" class="btn btn-primary" id="btnCalculate">
+                            <button type="submit" class="btn btn-primary">
                                 Calculate Deductions
                             </button>
                             <button type="button" class="btn btn-secondary" id="btnClear">
@@ -241,7 +241,7 @@
                         <div class="welcome-banner">
                             <div >
                                 <span >Deduction Analysis for</span>
-                                <h2 class="welcome-name" id="resWelcomeName">Welcome, Employee</h2>
+                                <h2 class="welcome-name" id="resWelcomeName"></h2>
                             </div>
 
                         </div>
@@ -256,16 +256,19 @@
                             <div class="kpi-grid">
                                 <div class="kpi-card gross-card">
                                     <div >Gross Salary</div>
+                                    <!-- didi gin display an data gamit an id -->
                                     <div class="kpi-value" id="resGrossSalary">₱0.00</div>
                                     <div >Original Input</div>
                                 </div>
                                 <div class="kpi-card deduction-card">
                                     <div >Total Reductions</div>
+                                    <!-- didi gin display an data gamit an id -->
                                     <div class="kpi-value" id="resTotalDeductions">₱0.00</div>
                                     <div >SSS (3%) + BIR (4%)</div>
                                 </div>
                                 <div class="kpi-card net-card">
                                     <div >Available Balance</div>
+                                    <!-- didi gin display an data gamit an id -->
                                     <div class="kpi-value" id="resAvailableBalance">₱0.00</div>
                                     <div >Take-Home Pay (93%)</div>
                                 </div>
@@ -274,7 +277,6 @@
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
 
                             <!-- Detailed Deduction Table -->
-                             <!-- <br></br> -->
                             <div class ="empty-state">
                                 
                              
@@ -298,6 +300,7 @@
                                             <td>
                                                 <span >3.0%</span>
                                             </td>
+                                            <!-- didi gin display an data gamit an id -->
                                             <td class="text-right text-danger" id="tblSSS">₱0.00</td>
                                         </tr>
                                         <tr>
@@ -306,6 +309,7 @@
                                                 <div >Withholding value added / statutory tax deduction</div>
                                             </td>
                                             <td><span >4.0%</span></td>
+                                            <!-- didi gin display an data gamit an id -->
                                             <td class="text-right text-danger" id="tblBIR">₱0.00</td>
                                         </tr>
                                         <tr >
@@ -314,11 +318,13 @@
                                         <tr >
                                             <td><strong>Total Reductions</strong></td>
                                             <td><span >7.0%</span></td>
+                                            <!-- didi gin display an data gamit an id -->
                                             <td class="text-right text-danger" id="tblTotalDeduc">₱0.00</td>
                                         </tr>
                                         <tr >
                                             <td><strong>Net Available Balance</strong></td>
                                             <td><span >93.0%</span></td>
+                                            <!-- didi gin display an data gamit an id -->
                                             <td class="text-right text-success" id="tblNetPay">₱0.00</td>
                                         </tr>
                                     </tbody>
@@ -328,16 +334,6 @@
                 </section>
             </div>
         </main>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -365,31 +361,6 @@
         </footer>
     </div>
 <!-- ==============================================------------------------==============================================--------------------==============================================--------------------------============================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
