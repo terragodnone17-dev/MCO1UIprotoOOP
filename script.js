@@ -120,14 +120,25 @@ class forvalidation {
 
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements - Form
+
+    // an para sa button nag listen siya sa type na "submit"  
     const vatForm = document.getElementById('vatForm');
+    // an sa Form na id Data name ngan Salary  
     const employeeNameInput = document.getElementById('employeeName');
     const salaryAmountInput = document.getElementById('salaryAmount');
+
+    //para sa clear btn
     const btnClear = document.getElementById('btnClear');
+
+    // an sa Form sa pag enter san Name  ngan Salaray
     const groupName = document.getElementById('group-name');
     const groupSalary = document.getElementById('group-salary');
+
+    // an sa pag display san error sa ngaran if imo input is not valid or valid
     const nameFeedback = document.getElementById('nameFeedback');
     const salaryFeedback = document.getElementById('salaryFeedback');
+
+    // sa pag display sa check mark or an X marc kun valid imo ngaran
     const nameStatus = document.getElementById('nameStatus');
     const salaryStatus = document.getElementById('salaryStatus');
 
@@ -139,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resTotalDeductions = document.getElementById('resTotalDeductions');
     const resAvailableBalance = document.getElementById('resAvailableBalance');
 
-    // DOM Elements - Breakdown Table an sa tight side table
+    // DOM Elements - An para sa Right Table
     const tblSSS = document.getElementById('tblSSS');
     const tblBIR = document.getElementById('tblBIR');
     const tblTotalDeduc = document.getElementById('tblTotalDeduc');
@@ -294,8 +305,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clear Form
     btnClear.addEventListener('click', () => {
         vatForm.reset();
+
+        // gin tanggal an sa validator sa ngarn ngan sa salary
         groupName.classList.remove('has-error', 'has-success');
         groupSalary.classList.remove('has-error', 'has-success');
+
+
         employeeNameInput.classList.remove('is-valid', 'is-invalid');
         salaryAmountInput.classList.remove('is-valid', 'is-invalid');
         nameFeedback.textContent = 'Letters, spaces, periods, and commas only';
