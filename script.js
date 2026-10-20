@@ -121,7 +121,7 @@ class forvalidation {
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements - Form
 
-    // an para sa button nag listen siya sa type na "submit"  
+    // an para sa button nag listen siya sa type na "submit"
     const vatForm = document.getElementById('vatForm');
     // an sa Form na id Data name ngan Salary  
     const employeeNameInput = document.getElementById('employeeName');
@@ -143,14 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const salaryStatus = document.getElementById('salaryStatus');
 
     // DOM Elements - Results
+
+    // an sa  pag display kun naka empty form
     const emptyState = document.getElementById('emptyState');
+    // an sa right side na box para ma display
     const resultsContainer = document.getElementById('resultsContainer');
+
+
+    // para sa pag dislpay san ngaran sa right side ba box
     const resWelcomeName = document.getElementById('resWelcomeName');
+
+    // pag display value sa right side na box like total deduction, avialable balance, etc etc.
     const resGrossSalary = document.getElementById('resGrossSalary');
     const resTotalDeductions = document.getElementById('resTotalDeductions');
     const resAvailableBalance = document.getElementById('resAvailableBalance');
 
-    // DOM Elements - An para sa Right Table
+    // DOM Elements - An para sa Right box sa 
     const tblSSS = document.getElementById('tblSSS');
     const tblBIR = document.getElementById('tblBIR');
     const tblTotalDeduc = document.getElementById('tblTotalDeduc');
@@ -162,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //  gin Format number to Peso currency string
 
     function formatCurrency(amount) {
-        return '₱' + Number(amount).toLocaleString('en-PH', {
+        return '₱' + Number(amount).toLocaleString( {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         });
@@ -188,14 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
             employeeNameInput.classList.remove('is-invalid');
             employeeNameInput.classList.add('is-valid');
             nameFeedback.textContent = 'Valid name format';
-            nameStatus.innerHTML = '<span style="color: #059669; font-weight: bold;">✓</span>';
+            nameStatus.innerHTML = '<span style="color: #059669; font-weight: bold;">OKS SAKTO lang</span>';
         } else {
             groupName.classList.remove('has-success');
             groupName.classList.add('has-error');
             employeeNameInput.classList.remove('is-valid');
             employeeNameInput.classList.add('is-invalid');
             nameFeedback.textContent = 'Invalid name. Only letters, spaces, periods, and commas are allowed.';
-            nameStatus.innerHTML = '<span style="color: #dc2626; font-weight: bold;">✕</span>';
+            nameStatus.innerHTML = '<span style="color: #dc2626; font-weight: bold;"> Mali KAAYU!! </span>';
         }
 
         // Update Salary field UI
@@ -210,14 +218,14 @@ document.addEventListener('DOMContentLoaded', () => {
             salaryAmountInput.classList.remove('is-invalid');
             salaryAmountInput.classList.add('is-valid');
             salaryFeedback.textContent = 'Valid salary amount';
-            salaryStatus.innerHTML = '<span style="color: #059669; font-weight: bold;">✓</span>';
+            salaryStatus.innerHTML = '<span style="color: #059669; font-weight: bold;">OKS SAKTO lang</span>';
         } else {
             groupSalary.classList.remove('has-success');
             groupSalary.classList.add('has-error');
             salaryAmountInput.classList.remove('is-valid');
             salaryAmountInput.classList.add('is-invalid');
             salaryFeedback.textContent = 'Invalid salary. Please enter a valid positive number.';
-            salaryStatus.innerHTML = '<span style="color: #dc2626; font-weight: bold;">✕</span>';
+            salaryStatus.innerHTML = '<span style="color: #dc2626; font-weight: bold;">Mali KAAYU!! </span>';
         }
 
         return { validator, isNameValid, isSalaryValid };
@@ -304,17 +312,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear Form
     btnClear.addEventListener('click', () => {
-        vatForm.reset();
+        // vatForm.reset();
 
-        // gin tanggal an sa validator sa ngarn ngan sa salary
+        // gin tanggal an sa validator display sa ngaran ngan sa salary na nag display text
         groupName.classList.remove('has-error', 'has-success');
         groupSalary.classList.remove('has-error', 'has-success');
 
-
+        // 
         employeeNameInput.classList.remove('is-valid', 'is-invalid');
         salaryAmountInput.classList.remove('is-valid', 'is-invalid');
+
+        //para ma reset an gin display san kun (valid input ->> Letter, periods, commas only)
         nameFeedback.textContent = 'Letters, spaces, periods, and commas only';
         salaryFeedback.textContent = 'Numbers, spaces, periods, and commas only';
+
         nameStatus.innerHTML = '';
         salaryStatus.innerHTML = '';
         employeeNameInput.focus();
