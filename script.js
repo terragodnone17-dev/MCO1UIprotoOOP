@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
    
-     // Real-time Validation Helper
+     // asya ine an Real-time Validation na nag display (OKS SAKTO lang) kun sakto an imo gin input
   
     function validateInputs(nameVal, salaryVal) {
         const validator = new forvalidation(nameVal, salaryVal);
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear Form
     btnClear.addEventListener('click', () => {
-        // vatForm.reset();
+        vatForm.reset();
 
         // gin tanggal an sa validator display sa ngaran ngan sa salary na nag display text
         groupName.classList.remove('has-error', 'has-success');
@@ -326,6 +326,8 @@ document.addEventListener('DOMContentLoaded', () => {
         nameFeedback.textContent = 'Letters, spaces, periods, and commas only';
         salaryFeedback.textContent = 'Numbers, spaces, periods, and commas only';
 
+
+        // para ma reset an ine na nag dislpay (OKS SAKTO lang)
         nameStatus.innerHTML = '';
         salaryStatus.innerHTML = '';
         employeeNameInput.focus();
