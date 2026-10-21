@@ -7,9 +7,9 @@ class forvalidation {
         this.VatDeduction1 = 4;
         this.validName1 = nameperson;
         this.validSalary2 = Salary;
-        this.converted = undefined;
-        this.converted2 = undefined;
-        this.remainingbal = undefined;
+        this.converted = null;
+        this.converted2 = null;
+        this.remainingbal = null;
     }
 
     
