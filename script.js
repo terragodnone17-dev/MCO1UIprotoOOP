@@ -13,16 +13,13 @@ class forvalidation {
     }
 
     
-    //   Converts salary input to float.
-    //   Handles string clean-up (removing commas) so standard formatted numbers parse accurately.
-     
+    //   gin Converts salary input to float.
+    //   Handles string clean-up (removing commas).
     displayOrigSalary() {
-        if (typeof this.validSalary2 === 'number') {
-            this.converted2 = this.validSalary2;
-        } else {
-            const cleanStr = String(this.validSalary2).replace(/,/g, '').trim();
-            this.converted2 = parseFloat(cleanStr);
-        }
+
+        const cleanStr = String(this.validSalary2).replace(/,/g, '').trim();
+        this.converted2 = parseFloat(cleanStr);
+
         return this.converted2;
     }
 
